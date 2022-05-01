@@ -1,0 +1,22 @@
+---
+layout: layouts/base.njk
+section: projects
+---
+{{ layoutContent | safe }}
+{% set collectionList = collections[collectionName] %}
+<section>
+<h1>Active Projects</h1>
+	{% for item in collectionList | reverse %}
+        {%if not item.data.isPastProject %}
+            {% include "components/projectListItem.njk" %}
+        {% endif %}
+	{% endfor %}
+</section>
+<section>
+<h1>Past Projects</h1>
+	{% for item in collectionList | reverse %}
+        {%if item.data.isPastProject %}
+            {% include "components/projectListItem.njk" %}
+        {% endif %}
+	{% endfor %}
+</section>
