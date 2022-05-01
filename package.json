@@ -1,5 +1,5 @@
 {
-  "name": "c4t-netlifycms-Leondardo",
+  "name": "c4t-netlifycms-mario",
   "version": "1.0.0",
   "description": "Code for Tucson website integrated with NetlifyCMS",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chris-calmatlas/c4t-netlifycms-Leonardo.git",
+    "url": "https://github.com/chris-calmatlas/c4t-netlifycms-mario.git",
     "boilerplate": "https://github.com/danurbanowicz/eleventy-netlify-boilerplate"
   },
   "author": {
