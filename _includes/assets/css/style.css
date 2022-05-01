@@ -69,13 +69,18 @@ main{
   box-shadow: 0px 149px 60px rgba(0, 0, 0, 0.01), 0px 84px 50px rgba(0, 0, 0, 0.03), 0px 37px 37px rgba(0, 0, 0, 0.04), 0px 9px 21px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);
 }
 
-.home header {
+.home header, 
+.home section {
+  width: 95%;
   max-width: 900px;
+  margin: auto;
+}
+
+.home header {
   position: absolute;
   bottom: -120px;
   left: 0;
   right: 0;
-  margin: auto;
   padding: 30px;
 }
 
@@ -85,15 +90,13 @@ main{
 
 .home section{
   padding-top: 110px;
-  max-width: 900px;
   display:flex;
   justify-content: space-between;
+  gap: 5%;
   align-items: stretch;
-  margin: auto;
 }
 
 .home article{
-  width: 48%;
   padding: 38px;
   display: flex;
   flex-direction: column;
@@ -178,6 +181,7 @@ main{
   background-color: var(--primary);
   color: var(--light-font);
   text-align: center;
+  border-radius: 8px;
 }
 
 /* Social Links */
@@ -189,6 +193,9 @@ main{
 @media screen and (max-width: 850px){
 
   /*main navbar - based on https://alvarotrigo.com/blog/hamburger-menu-css/ */
+  .mainNav{
+    justify-content: space-between;
+  }
   .menuButtonContainer {
     display: flex;
     height: 30px;
@@ -262,5 +269,14 @@ main{
     padding: 0.5rem 0;
     width: 100%;
     color: var(--font);
+  }
+}
+
+@media screen and (max-width: 680px){
+  .home section{
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding-top: 4rem;
   }
 }
