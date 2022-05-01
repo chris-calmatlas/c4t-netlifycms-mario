@@ -8,9 +8,9 @@
 }
 
 :root {
-  --primary: rgb(22, 99, 44);
-  --secondary: rgb(0, 0, 0);
-  --background:rgb(238, 215, 204);
+  --primary: rgb(1, 22, 39);
+  --secondary: rgb(39, 22, 1);
+  --background:rgb(249, 236, 229);
   --secondary-background: rgb(249, 235, 229);
   --dark-background: rgb(0, 0, 0);
   --font: rgb(0, 0, 0);
@@ -22,7 +22,8 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: "Work Sans", Helvetica, Arial, sans-serif;
-  min-width: 300px;
+  min-width: 320px;
+  background-color: var(--background);
 }
 
 html{
@@ -38,15 +39,75 @@ article h2 a{
   color: var(--font);
 }
 
+main{
+  max-width: 1098px;
+  margin: auto;
+}
+
 .logo {
   background-image: url("/static/img/logo.svg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: 80%;
-  background-color: rgb(0, 0, 0);
+  background-size: 65%;
+  background-color: var(--primary);
+}
+
+.hero{
+  height: 500px;
+  background-color: var(--primary);
+  background-image: url("/static/img/home-bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin-bottom: 110px;
+}
+
+.home header, 
+.home article{
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0px 149px 60px rgba(0, 0, 0, 0.01), 0px 84px 50px rgba(0, 0, 0, 0.03), 0px 37px 37px rgba(0, 0, 0, 0.04), 0px 9px 21px rgba(0, 0, 0, 0.05), 0px 0px 0px rgba(0, 0, 0, 0.05);
+}
+
+.home header {
+  max-width: 900px;
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 30px;
+}
+
+.home header h1{
+  margin: 0;
+}
+
+.home section{
+  padding-top: 110px;
+  max-width: 900px;
   display:flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: auto;
+}
+
+.home article{
+  width: 48%;
+  padding: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.75rem;
+}
+
+.home article *{
+  margin: 0;
+}
+
+.home article .button{
+  width: 222px;
 }
 
 /*main navbar - based on https://alvarotrigo.com/blog/hamburger-menu-css/ */
@@ -54,16 +115,29 @@ article h2 a{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   color: var(--light-font);
-  padding-right: 1rem;
-  background-color: transparent;
+  padding: .7rem;
+  background-color: var(--primary);
   position: relative;
+  font-size: 110%;
 }
 
 .mainNav .logo{
   height: 38px;
   width: 38px;
+}
+
+.mainNav .navTitle {
+  display: flex;
+  align-items: center;
+  font-size: 125%;
+  font-weight: 700;
+}
+
+.mainNav .navTitle a{
+  color: var(--light-font);
+  text-decoration: none;
 }
 
 .navItems {
@@ -101,7 +175,7 @@ article h2 a{
 .button {
   display: block;
   line-height: 3rem;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   color: var(--light-font);
   text-align: center;
 }
