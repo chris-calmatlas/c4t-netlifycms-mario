@@ -177,17 +177,45 @@ main{
 /* Button */
 .button {
   display: block;
+  text-decoration: none;
   line-height: 3rem;
   background-color: var(--primary);
   color: var(--light-font);
   text-align: center;
   border-radius: 8px;
+  font-size: 125%;
+  font-weight: 600;
 }
 
 /* Social Links */
-.socialLinks li a{
+.socialLinks {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: .5rem;
+  margin: 3rem auto;
+  padding: 0;
+}
+
+.socialLinks li {
+  display: flex;
+  justify-content: space-around;
+  gap: .4rem;
+  align-items: center;
+  border: solid 1px var(--font);
+  border-radius: 5px;
+  height: 30px;
+  padding: 0 .5rem;
+}
+
+.socialLinks a{
   color: var(--font);
   text-decoration: none;
+}
+
+.pageFooter {
+  margin-top: 100px;
+  text-align: center;
 }
 
 @media screen and (max-width: 850px){
