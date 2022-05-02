@@ -22,7 +22,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: "Work Sans", Helvetica, Arial, sans-serif;
-  min-width: 320px;
+  min-width: 300px;
   background-color: var(--background);
 }
 
@@ -277,7 +277,14 @@ main{
     flex-direction: column;
     justify-content: flex-start;
     gap: 3rem;
-    padding-top: 4rem;
+  }
+
+  .home header{
+    bottom: -200px;
+  }
+
+  .home section{
+    padding-top: 150px;
   }
 }
 
